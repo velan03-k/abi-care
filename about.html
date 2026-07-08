@@ -1,65 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-        <div>
-        <nav>
-             <img src="Screenshot 2026-07-07 120946.png" widtha="80" height="80" alt="Logo">
-            
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="doc.html">DOCTERS</a>
-            <a href="dep.html">DEPARTMENT</a>
-            <a href="application.html">APPLICATIONS</a>
-        </nav>
-        <hr>
-    </div>
+    <nav class="bg-[#0F172A] shadow-lg sticky top-0 z-50">
+        <div class="w-full px-0">
+            <div class="flex items-center justify-between h-20">
 
-    <div>
-        <h1>About Us</h1>
-        <h2>Welcome to ABI CARE, your trusted partner in healthcare management. Our mission is to provide a seamless and efficient platform for patients, doctors, and healthcare institutions to connect and manage their healthcare needs.</h2>
-        <h2>At ABI CARE, we believe that healthcare should be accessible, convenient, and patient-centric. Our platform is designed to simplify the healthcare experience, allowing you to focus on what matters most – your health and well-being.</h2>
-        <hr>
-    </div>
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="Gemini_Generated_Image_r3w7g9r3w7g9r3w7-clean.png" alt="ABI CARE Logo" class="h-20 w-25">
+                </div>
 
-    <div>
-        <center><h2>Our Vision</h2></center>
-        <p>Our vision is to revolutionize healthcare management by leveraging technology to create a connected ecosystem that empowers patients and healthcare providers alike. We strive to enhance the quality of care, improve patient outcomes, and foster a culture of collaboration within the healthcare industry.</p>
-        <hr>
-    </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
 
-    <div>
-        <center><h2>Our Team</h2></center>
-        <p>Our team is composed of dedicated professionals with expertise in healthcare, technology, and customer service. We are committed to delivering exceptional service and support to our users, ensuring that their experience with ABI CARE is seamless and satisfying.</p>
-        <hr>
-    </div>
+                    <a href="home.html" class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        HOME
+                    </a>
 
-        <div>
-        <footer>
-            <img src="Screenshot 2026-07-07 120946.png" widtha="80" height="80" alt="Logo">
-            <p>Connect with us:</p>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
+                    <a href="about.html" class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        ABOUT US
+                    </a>
 
-            <center>
-                <p>© 2024 ABI CARE. All rights reserved.</p>
-                <p>Contact Us:</p>
-                <p>Email: abicare2000@gmail.com</p>
-                <p>Phone: +1 (123) 456-7890</p>
-            </center>
+                    <a href="doctors.html"
+                        class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        DOCTORS
+                    </a>
 
-            <div align="right">
-                <p>Terms of Service</p>
-                <p>Privacy Policy</p>
+                    <a href="departments.html"
+                        class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        DEPARTMENTS
+                    </a>
+
+                    <a href="applications.html"
+                        class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        APPLICATIONS
+                    </a>
+
+                </div>
+
+                <!-- Right Side -->
+                <!-- Profile Dropdown -->
+                <div class="relative">
+
+                    <!-- Profile Icon -->
+                    <button id="profileBtn"
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-[#6BBAE0] hover:bg-white transition">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                            stroke="#0F172A" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.964 0a9 9 0 10-11.964 0m11.964 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div id="profileMenu"
+                        class="hidden absolute right-0 mt-3 w-48 bg-white rounded-lg shadow-xl overflow-hidden">
+
+                        <a href="profile.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">
+                            👤 My Profile
+                        </a>
+
+                        <a href="appointments.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">
+                            📅 My Appointments
+                        </a>
+
+                        <a href="settings.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">
+                            ⚙️ Settings
+                        </a>
+
+                        <hr>
+
+                        <a href="logout.html" class="block px-4 py-3 text-red-600 hover:bg-red-50">
+                            🚪 Logout
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-[#6BBAE0] text-3xl">
+                    ☰
+                </button>
+
             </div>
 
-            
-        </footer>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-5">
+
+            <a href="home.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                HOME
+            </a>
+
+            <a href="about.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                ABOUT US
+            </a>
+
+            <a href="doctors.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                DOCTORS
+            </a>
+
+            <a href="departments.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                DEPARTMENTS
+            </a>
+
+            <a href="applications.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                APPLICATIONS
+            </a>
+
+            <!-- Mobile Profile Button -->
+            <button
+                class="mt-4 w-full bg-[#6BBAE0] text-[#0F172A] py-2 rounded-full font-semibold hover:bg-white transition">
+                Profile
+            </button>
+
+        </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        const profileBtn = document.getElementById("profileBtn");
+        const profileMenu = document.getElementById("profileMenu");
+
+        profileBtn.addEventListener("click", () => {
+            profileMenu.classList.toggle("hidden");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (e) {
+            if (!profileBtn.contains(e.target) && !profileMenu.contains(e.target)) {
+                profileMenu.classList.add("hidden");
+            }
+        });
+    </script>
+
+
+    <section class="bg-[#0F172A] py-20">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+<div class="w-full bg-[#1E293B] rounded-3xl shadow-2xl border border-[#6BBAE0]/30 p-10">
+
+    <!-- Logo / Title -->
+    <div class="text-center">
+
+        <div class="inline-block bg-[#6BBAE0] text-[#0F172A] px-8 py-3 rounded-full text-2xl font-bold shadow-lg">
+            ABI CARE
+        </div>
+
+        <h3 class="mt-6 text-4xl font-bold text-white">
+            Your Trusted Healthcare Partner
+        </h3>
+
     </div>
+
+    <!-- Description -->
+    <p class="mt-8 text-[#E091AC] text-lg leading-9 text-center max-w-5xl mx-auto">
+
+        ABI CARE is committed to providing secure, compassionate,
+        and accessible healthcare services through modern technology.
+        We connect patients, doctors, and hospitals through one
+        smart healthcare platform, making healthcare simpler,
+        faster, and more reliable.
+
+    </p>
+
+</div>
+
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+                <!-- Image -->
+                <div class="mt-18">
+                    <img src="Gemini_Generated_Image_aq0j32aq0j32aq0j-clean.png" alt="Hospital" class="rounded-3xl shadow-2xl w-full h-[500px] object-cover">
+                </div>
+
+                <!-- Content -->
+                <div>
+
+                    <h2 class="text-3xl font-bold text-[#0F172A]">
+                        Your Trusted Healthcare Partner
+                    </h2>
+
+                    <p class="mt-6 text-[#E091AC] leading-8">
+
+                        ABI CARE is a smart healthcare platform designed to simplify
+                        hospital services for everyone. Whether you need to book appointments,
+                        consult experienced doctors, access medical records, or manage healthcare
+                        services, ABI CARE brings everything together in one secure and user-friendly platform.
+
+                    </p>
+
+                    <p class="mt-5 text-[#E091AC] leading-8">
+
+                        We believe healthcare should be simple, secure, and accessible.
+                        By combining advanced technology with compassionate care,
+                        we help patients receive better treatment while supporting
+                        healthcare professionals with efficient digital solutions.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="bg-[#0F172A] py-20">
+
+        <div class="max-w-5xl mx-auto text-center px-6">
+
+            <h2 class="text-4xl font-bold text-[#6BBAE0]">
+                Our Vision
+            </h2>
+
+            <p class="mt-8 text-lg text-[#E091AC] leading-8">
+
+                Our vision is to revolutionize healthcare by building a connected,
+                technology-driven ecosystem where patients and healthcare professionals
+                can interact effortlessly. We strive to improve healthcare accessibility,
+                enhance patient outcomes, and create a future where quality medical care
+                is available to everyone.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="bg-[#0F172A] py-20">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-14">
+
+                <h2 class="text-4xl font-bold text-[#6BBAE0]">
+                    Meet Our Team
+                </h2>
+
+                <p class="mt-4 text-[#E091AC]">
+                    Dedicated professionals working together to deliver exceptional healthcare.
+                </p>
+
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="bg-[#F8FAFC] rounded-3xl shadow-lg p-8 text-center">
+
+                    <img src="Gemini_Generated_Image_9fqu489fqu489fqu (1).png" class="w-32 h-32 rounded-full mx-auto object-cover">
+
+                    <h3 class="mt-5 text-xl font-bold text-[#0F172A]">
+                        Dr. John Smith
+                    </h3>
+
+                    <p class="text-[#6BBAE0]">
+                        Chief Medical Officer
+                    </p>
+
+                </div>
+
+                <div class="bg-[#F8FAFC] rounded-3xl shadow-lg p-8 text-center">
+
+                    <img src="Gemini_Generated_Image_9fqu489fqu489fqu (2).png" class="w-32 h-32 rounded-full mx-auto object-cover">
+
+                    <h3 class="mt-5 text-xl font-bold text-[#0F172A]">
+                        Dr. Sarah Wilson
+                    </h3>
+
+                    <p class="text-[#6BBAE0]">
+                        Senior Cardiologist
+                    </p>
+
+                </div>
+
+                <div class="bg-[#F8FAFC] rounded-3xl shadow-lg p-8 text-center">
+
+                    <img src="Gemini_Generated_Image_9fqu489fqu489fqu (3).png" class="w-32 h-32 rounded-full mx-auto object-cover">
+
+                    <h3 class="mt-5 text-xl font-bold text-[#0F172A]">
+                        Dr. David Lee
+                    </h3>
+
+                    <p class="text-[#6BBAE0]">
+                        Healthcare Administrator
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="bg-[#0F172A] text-white pt-16 pb-8">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+            <div class="grid md:grid-cols-4 gap-10">
+
+                <!-- Logo & About -->
+                <div>
+
+                    <h2 class="text-2xl font-bold text-[#6BBAE0]">
+                        ABI CARE
+                    </h2>
+
+                    <p class="mt-4 text-[#E091AC] leading-7">
+
+                        ABI CARE is committed to providing secure,
+                        compassionate and accessible healthcare
+                        services through modern technology.
+
+                    </p>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+
+                    <h3 class="text-xl font-semibold text-[#6BBAE0] mb-5">
+                        Quick Links
+                    </h3>
+
+                    <ul class="space-y-3 text-[#E091AC]">
+
+                        <li><a href="home.html" class="hover:text-white">Home</a></li>
+
+                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+
+                        <li><a href="doc.html" class="hover:text-white">Doctors</a></li>
+
+                        <li><a href="dep.html" class="hover:text-white">Departments</a></li>
+
+                        <li><a href="application.html" class="hover:text-white">Book Appointment</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+                <div>
+
+                    <h3 class="text-xl font-semibold text-[#6BBAE0] mb-5">
+                        Contact Us
+                    </h3>
+
+                    <div class="space-y-3 text-[#E091AC]">
+
+                        <p>📧 abicare2000@gmail.com</p>
+
+                        <p>📞 +91 7904019592</p>
+
+                        <p>📍 Chennai, Tamil Nadu, India</p>
+
+                        <p>🕒 24 × 7 Emergency Services</p>
+
+                    </div>
+
+                </div>
+
+                <!-- Follow Us -->
+                <div>
+
+                    <h3 class="text-xl font-semibold text-[#6BBAE0] mb-5">
+                        Follow Us
+                    </h3>
+
+                    <div class="flex gap-4 mt-5">
+
+                        <!-- Facebook -->
+                        <a href="https://facebook.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://instagram.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+
+                        <!-- X (Twitter) -->
+                        <a href="https://x.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fa-brands fa-x-twitter text-xl"></i>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a href="https://youtube.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="mt-8">
+
+                        <a href="#" class="block text-[#E091AC] hover:text-white mb-2">
+                            Privacy Policy
+                        </a>
+
+                        <a href="#" class="block text-[#E091AC] hover:text-white">
+                            Terms & Conditions
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr class="border-gray-700 my-10">
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+
+                <p class="text-gray-400 text-sm">
+
+                    © 2026 ABI CARE. All Rights Reserved.
+
+                </p>
+
+                <p class="text-gray-400 text-sm mt-4 md:mt-0">
+
+                    Designed with ❤️ for Better Healthcare.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
 </body>
+
+
 </html>

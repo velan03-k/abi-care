@@ -1,149 +1,786 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ABI CARE - Our Doctors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-    <div>
-        <nav>
-            <img src="Screenshot 2026-07-07 120946.png" widtha="80" height="80" alt="Logo">
-            
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="doc.html">DOCTERS</a>
-            <a href="dep.html">DEPARTMENT</a>
-            <a href="application.html">APPLICATIONS</a>
-        </nav>
-        <hr>
-    </div>
-    
-    <div>
-        <h1>Our Doctors</h1>
-        <h2>Meet our team of highly skilled and compassionate doctors who are dedicated to providing exceptional healthcare services. Our doctors specialize in various medical fields, ensuring that you receive the best care possible.</h2>
-        <button>View All Doctors</button>
-        <button>Book an Appointment</button>
-        <hr>
-    </div>
 
-    <div>
-        <center><input type="text" placeholder="Search for doctors..."></center>
-    </div>
+    <!-- Navbar -->
+    <nav class="bg-[#0F172A] shadow-lg sticky top-0 z-50">
+        <div class="w-full px-0">
+            <div class="flex items-center justify-between h-20">
 
-    <div class="filter-section" align = "right">
-    <label for="department">Filter by Department:</label>
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="Gemini_Generated_Image_r3w7g9r3w7g9r3w7-clean.png" alt="ABI CARE Logo" class="h-20 w-25">
+                </div>
 
-    <select id="department" name="department">
-        <option value="all">All Departments</option>
-        <option value="cardiology">Cardiology</option>
-        <option value="neurology">Neurology</option>
-        <option value="orthopedics">Orthopedics</option>
-        <option value="pediatrics">Pediatrics</option>
-        <option value="dermatology">Dermatology</option>
-        <option value="gynecology">Gynecology</option>
-    </select>
-</div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
 
-    <div>
-        <center><h2>Our Medical Specialistss</h2>
-        <h3>Experienced Professionals You Can Trust</h3></center>
-        <p>Our team of medical specialists is committed to delivering personalized care and innovative treatments. With years of experience and a passion for improving patient outcomes, our doctors are here to guide you on your journey to better health.</p>
-        <hr>
-    </div>
+                    <a href="home.html" class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        HOME
+                    </a>
 
-    <div class="grid-container">
-  <div class="grid-item"><h2>Dr. Arun Kumar</h2><h3>Cardiologist</h3><ul>MBBS, MD, DM (Cardiology)
-15+ Years Experience
-Heart Care Specialist
-Available: Mon – Sat</ul><button>Book Appointment</button></div>
-  <div class="grid-item"><h2>Dr. Priya Sharma</h2><h3>Neurologist</h3><ul>MBBS, MD, DM (Neurology)
-10+ Years Experience
-Neuroscience Expert
-Available: Tue – Sun</ul><button>Book Appointment</button></div>
-  <div class="grid-item"><h2>Dr. Ramesh Patel</h2><h3>Orthopedic Surgeon</h3><ul>MBBS, MS (Orthopedics)
-12+ Years Experience
-Joint Replacement Specialist
-Available: Mon – Sat</ul><button>Book Appointment</button></div>
-  <div class="grid-item"><h2>Dr. Sunita Reddy</h2><h3>Pediatrician</h3><ul>MBBS, MD (Pediatrics)
-8+ Years Experience
-Child Health Specialist
-Available: Mon – Fri</ul><button>Book Appointment</button></div>
-  <div class="grid-item"><h2>Dr. Vikram Singh</h2><h3>Dermatologist</h3><ul>MBBS, MD (Dermatology)
-10+ Years Experience
-Skin Care Expert
-Available: Tue – Sun</ul></div>
-  <div class="grid-item"><h2>Dr. Anjali Gupta</h2><h3>Gynecologist</h3><ul>MBBS, MD (Gynecology)
-14+ Years Experience
-Women's Health Specialist
-Available: Mon – Sat</ul></div>
-<hr>
-</div>
+                    <a href="about.html" class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        ABOUT US
+                    </a>
 
-<div>
-    <h2>Why Choose Our Doctors?</h2>
-    <ul>
-        <li>Highly qualified and experienced medical professionals.</li>
-        <li>Compassionate care and patient-centered approach.</li>
-        <li>State-of-the-art medical facilities and technology.</li>
-        <li>Comprehensive range of medical specialties.</li>
-        <li>Commitment to continuous learning and professional development.</li>
-    </ul>
-    <hr>
-</div>
+                    <a href="doc.html" class="text-white font-semibold border-b-2 border-[#6BBAE0] transition duration-300">
+                        DOCTORS
+                    </a>
 
-<div>
-    <h2>Our Commitment</h2>
-    <p>We are committed to providing the highest quality healthcare services to our patients. Our team of dedicated professionals works tirelessly to ensure that every patient receives personalized care and attention.</p>
-    <hr>
-</div>
+                    <a href="dep.html" class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        DEPARTMENTS
+                    </a>
 
-<div>
-    <h2>Appointment Process</h2>
-    <p>Booking an appointment with our specialists is easy and convenient. You can schedule a visit online or by calling our reservation line. Our staff will assist you in finding the most suitable time for your consultation.</p>
-    <hr>
-</div>
+                    <a href="applications.html" class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        APPLICATIONS
+                    </a>
 
-<div class="grid-container">
-    <h2>Statistics Section</h2>
-  <div class="grid-item"><h3>25+
-Experienced Doctors</h3></div>
-  <div class="grid-item"><h3>100+
-Happy Patients</h3></div>
-  <div class="grid-item"><h3>15+
-Years of Excellence</h3></div>
-  <div class="grid-item"><h3>5+
-Medical Specialties</h3></div>
-  <div class="grid-item"><h3>24/7
-Emergency Care</h3></div>
-  <div class="grid-item"><h3>100%
-Patient Satisfaction</h3></div>
-</div>
+                </div>
 
-        <div>
-        <footer>
-            <img src="Screenshot 2026-07-07 120946.png" widtha="80" height="80" alt="Logo">
-            <p>Connect with us:</p>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
+                <!-- Right Side -->
+                <!-- Profile Dropdown -->
+                <div class="relative">
 
-            <center>
-                <p>© 2024 ABI CARE. All rights reserved.</p>
-                <p>Contact Us:</p>
-                <p>Email: abicare2000@gmail.com</p>
-                <p>Phone: +1 (123) 456-7890</p>
-            </center>
+                    <!-- Profile Icon -->
+                    <button id="profileBtn"
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-[#6BBAE0] hover:bg-white transition">
 
-            <div align="right">
-                <p>Terms of Service</p>
-                <p>Privacy Policy</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                            stroke="#0F172A" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.964 0a9 9 0 10-11.964 0m11.964 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div id="profileMenu"
+                        class="hidden absolute right-0 mt-3 w-48 bg-white rounded-lg shadow-xl overflow-hidden">
+
+                        <a href="profile.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">
+                            👤 My Profile
+                        </a>
+
+                        <a href="appointments.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">
+                            📅 My Appointments
+                        </a>
+
+                        <a href="settings.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">
+                            ⚙️ Settings
+                        </a>
+
+                        <hr>
+
+                        <a href="logout.html" class="block px-4 py-3 text-red-600 hover:bg-red-50">
+                            🚪 Logout
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-[#6BBAE0] text-3xl">
+                    ☰
+                </button>
+
             </div>
 
-            
-        </footer>
-    </div>
+        </div>
 
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-5">
+
+            <a href="home.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                HOME
+            </a>
+
+            <a href="about.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                ABOUT US
+            </a>
+
+            <a href="doctors.html" class="block py-3 text-white font-semibold">
+                DOCTORS
+            </a>
+
+            <a href="departments.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                DEPARTMENTS
+            </a>
+
+            <a href="applications.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                APPLICATIONS
+            </a>
+
+            <!-- Mobile Profile Button -->
+            <button
+                class="mt-4 w-full bg-[#6BBAE0] text-[#0F172A] py-2 rounded-full font-semibold hover:bg-white transition">
+                Profile
+            </button>
+
+        </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        const profileBtn = document.getElementById("profileBtn");
+        const profileMenu = document.getElementById("profileMenu");
+
+        profileBtn.addEventListener("click", () => {
+            profileMenu.classList.toggle("hidden");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (e) {
+            if (!profileBtn.contains(e.target) && !profileMenu.contains(e.target)) {
+                profileMenu.classList.add("hidden");
+            }
+        });
+    </script>
+
+    <!-- HERO SECTION - DOCTORS -->
+    <section class="bg-[#0F172A] text-white">
+
+        <div class="max-w-7xl mx-auto px-8 py-24">
+
+            <div class="grid lg:grid-cols-[45%_55%] items-center gap-12">
+
+                <!-- Left Content -->
+                <div>
+
+                    <span
+                        class="inline-block bg-[#6BBAE0]/20 text-[#6BBAE0] px-8 py-3 rounded-full text-lg font-bold shadow-lg border border-[#6BBAE0]/40">
+                        Our Doctors
+                    </span>
+
+                    <h1 class="mt-6 text-5xl md:text-6xl font-bold leading-tight">
+                        Meet Our
+                        <span class="text-[#6BBAE0]">
+                            Medical Experts
+                        </span>
+                    </h1>
+
+                    <p class="mt-8 text-lg text-gray-300 leading-8">
+
+                        Our team of highly skilled and compassionate doctors
+                        is dedicated to providing exceptional healthcare services.
+                        With expertise across <span class="font-semibold text-[#6BBAE0]">multiple specialties</span>,
+                        we ensure you receive the best care possible.
+
+                    </p>
+
+                    <h3 class="mt-6 text-xl text-[#F8B4C8] font-semibold">
+                        Experienced. Trusted. Caring.
+                    </h3>
+
+                    <!-- Buttons -->
+                    <div class="mt-10 flex flex-wrap gap-5">
+
+                        <a href="applications.html"
+                            class="bg-[#6BBAE0] text-[#0F172A] px-7 py-3 rounded-lg font-semibold hover:bg-white transition duration-300">
+
+                            Book Appointment
+
+                        </a>
+
+                        <a href="#doctor-list"
+                            class="border-2 border-[#6BBAE0] text-[#6BBAE0] px-7 py-3 rounded-lg font-semibold hover:bg-[#6BBAE0] hover:text-[#0F172A] transition duration-300">
+
+                            View All Doctors
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Image -->
+                <img src="Gemini_Generated_Image_ei62snei62snei62-clean.png" alt="Medical Team"
+                    class="w-full h-[500px] object-cover rounded-[40px] shadow-2xl border-4 border-[#6BBAE0]">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SEARCH & FILTER SECTION -->
+    <section class="bg-[#0F172A] py-12 border-t border-[#1E293B]">
+        <div class="max-w-7xl mx-auto px-8">
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+                <!-- Search Bar -->
+                <div class="w-full md:w-1/2">
+                    <div class="relative">
+                        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-[#6BBAE0]"></i>
+                        <input type="text" placeholder="Search for doctors..."
+                            class="w-full bg-[#1E293B] text-white pl-12 pr-4 py-3 rounded-full border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                    </div>
+                </div>
+
+                <!-- Filter Dropdown -->
+                <div class="flex items-center gap-4">
+                    <label for="department" class="text-[#6BBAE0] font-semibold">
+                        Filter by:
+                    </label>
+
+                    <select id="department" name="department"
+                        class="bg-[#1E293B] text-white px-6 py-3 rounded-full border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition cursor-pointer">
+
+                        <option value="all">All Departments</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="orthopedics">Orthopedics</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="dermatology">Dermatology</option>
+                        <option value="gynecology">Gynecology</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DOCTOR LIST SECTION -->
+    <section id="doctor-list" class="bg-[#0F172A] py-20">
+        <div class="max-w-7xl mx-auto px-8">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+
+                <h2 class="text-4xl font-bold text-[#6BBAE0]">
+                    Our Medical Specialists
+                </h2>
+
+                <p class="mt-4 text-lg text-[#E091AC] leading-8">
+                    Experienced Professionals You Can Trust
+                </p>
+
+                <p class="mt-6 text-gray-300 max-w-3xl mx-auto leading-7">
+                    Our team of medical specialists is committed to delivering personalized care and innovative treatments.
+                    With years of experience and a passion for improving patient outcomes, our doctors are here to guide
+                    you on your journey to better health.
+                </p>
+
+            </div>
+
+            <!-- Doctor Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Doctor 1 -->
+                <div class="bg-[#1E293B] rounded-2xl p-6 border border-[#6BBAE0]/20 hover:border-[#6BBAE0] transition duration-300">
+
+                    <div class="w-24 h-24 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-4xl font-bold text-[#6BBAE0]">AK</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white text-center">
+                        Dr. Arun Kumar
+                    </h3>
+
+                    <p class="text-[#6BBAE0] text-center font-semibold">
+                        Cardiologist
+                    </p>
+
+                    <ul class="mt-4 text-gray-300 space-y-2 text-sm">
+                        <li>• MBBS, MD, DM (Cardiology)</li>
+                        <li>• 15+ Years Experience</li>
+                        <li>• Heart Care Specialist</li>
+                        <li>• Available: Mon – Sat</li>
+                    </ul>
+
+                    <button class="mt-6 w-full bg-[#6BBAE0] text-[#0F172A] py-2 rounded-lg font-semibold hover:bg-white transition duration-300">
+                        Book Appointment
+                    </button>
+
+                </div>
+
+                <!-- Doctor 2 -->
+                <div class="bg-[#1E293B] rounded-2xl p-6 border border-[#6BBAE0]/20 hover:border-[#6BBAE0] transition duration-300">
+
+                    <div class="w-24 h-24 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-4xl font-bold text-[#6BBAE0]">PS</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white text-center">
+                        Dr. Priya Sharma
+                    </h3>
+
+                    <p class="text-[#6BBAE0] text-center font-semibold">
+                        Neurologist
+                    </p>
+
+                    <ul class="mt-4 text-gray-300 space-y-2 text-sm">
+                        <li>• MBBS, MD, DM (Neurology)</li>
+                        <li>• 10+ Years Experience</li>
+                        <li>• Neuroscience Expert</li>
+                        <li>• Available: Tue – Sun</li>
+                    </ul>
+
+                    <button class="mt-6 w-full bg-[#6BBAE0] text-[#0F172A] py-2 rounded-lg font-semibold hover:bg-white transition duration-300">
+                        Book Appointment
+                    </button>
+
+                </div>
+
+                <!-- Doctor 3 -->
+                <div class="bg-[#1E293B] rounded-2xl p-6 border border-[#6BBAE0]/20 hover:border-[#6BBAE0] transition duration-300">
+
+                    <div class="w-24 h-24 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-4xl font-bold text-[#6BBAE0]">RP</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white text-center">
+                        Dr. Ramesh Patel
+                    </h3>
+
+                    <p class="text-[#6BBAE0] text-center font-semibold">
+                        Orthopedic Surgeon
+                    </p>
+
+                    <ul class="mt-4 text-gray-300 space-y-2 text-sm">
+                        <li>• MBBS, MS (Orthopedics)</li>
+                        <li>• 12+ Years Experience</li>
+                        <li>• Joint Replacement Specialist</li>
+                        <li>• Available: Mon – Sat</li>
+                    </ul>
+
+                    <button class="mt-6 w-full bg-[#6BBAE0] text-[#0F172A] py-2 rounded-lg font-semibold hover:bg-white transition duration-300">
+                        Book Appointment
+                    </button>
+
+                </div>
+
+                <!-- Doctor 4 -->
+                <div class="bg-[#1E293B] rounded-2xl p-6 border border-[#6BBAE0]/20 hover:border-[#6BBAE0] transition duration-300">
+
+                    <div class="w-24 h-24 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-4xl font-bold text-[#6BBAE0]">SR</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white text-center">
+                        Dr. Sunita Reddy
+                    </h3>
+
+                    <p class="text-[#6BBAE0] text-center font-semibold">
+                        Pediatrician
+                    </p>
+
+                    <ul class="mt-4 text-gray-300 space-y-2 text-sm">
+                        <li>• MBBS, MD (Pediatrics)</li>
+                        <li>• 8+ Years Experience</li>
+                        <li>• Child Health Specialist</li>
+                        <li>• Available: Mon – Fri</li>
+                    </ul>
+
+                    <button class="mt-6 w-full bg-[#6BBAE0] text-[#0F172A] py-2 rounded-lg font-semibold hover:bg-white transition duration-300">
+                        Book Appointment
+                    </button>
+
+                </div>
+
+                <!-- Doctor 5 -->
+                <div class="bg-[#1E293B] rounded-2xl p-6 border border-[#6BBAE0]/20 hover:border-[#6BBAE0] transition duration-300">
+
+                    <div class="w-24 h-24 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-4xl font-bold text-[#6BBAE0]">VS</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white text-center">
+                        Dr. Vikram Singh
+                    </h3>
+
+                    <p class="text-[#6BBAE0] text-center font-semibold">
+                        Dermatologist
+                    </p>
+
+                    <ul class="mt-4 text-gray-300 space-y-2 text-sm">
+                        <li>• MBBS, MD (Dermatology)</li>
+                        <li>• 10+ Years Experience</li>
+                        <li>• Skin Care Expert</li>
+                        <li>• Available: Tue – Sun</li>
+                    </ul>
+
+                    <button class="mt-6 w-full bg-[#6BBAE0] text-[#0F172A] py-2 rounded-lg font-semibold hover:bg-white transition duration-300">
+                        Book Appointment
+                    </button>
+
+                </div>
+
+                <!-- Doctor 6 -->
+                <div class="bg-[#1E293B] rounded-2xl p-6 border border-[#6BBAE0]/20 hover:border-[#6BBAE0] transition duration-300">
+
+                    <div class="w-24 h-24 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-4xl font-bold text-[#6BBAE0]">AG</span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white text-center">
+                        Dr. Anjali Gupta
+                    </h3>
+
+                    <p class="text-[#6BBAE0] text-center font-semibold">
+                        Gynecologist
+                    </p>
+
+                    <ul class="mt-4 text-gray-300 space-y-2 text-sm">
+                        <li>• MBBS, MD (Gynecology)</li>
+                        <li>• 14+ Years Experience</li>
+                        <li>• Women's Health Specialist</li>
+                        <li>• Available: Mon – Sat</li>
+                    </ul>
+
+                    <button class="mt-6 w-full bg-[#6BBAE0] text-[#0F172A] py-2 rounded-lg font-semibold hover:bg-white transition duration-300">
+                        Book Appointment
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="bg-[#0F172A] py-20 border-t border-[#1E293B]">
+        <div class="max-w-7xl mx-auto px-8">
+
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+
+                <!-- Left Side -->
+                <div>
+
+                    <span
+                        class="inline-block bg-[#6BBAE0]/20 text-[#6BBAE0] px-6 py-2 rounded-full text-sm font-bold border border-[#6BBAE0]/40">
+                        Why Choose Us
+                    </span>
+
+                    <h2 class="mt-6 text-4xl font-bold text-white">
+                        Why Choose Our
+                        <span class="text-[#6BBAE0]">Doctors?</span>
+                    </h2>
+
+                    <ul class="mt-8 space-y-4 text-gray-300">
+
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#6BBAE0] text-2xl">✓</span>
+                            Highly qualified and experienced medical professionals.
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#6BBAE0] text-2xl">✓</span>
+                            Compassionate care and patient-centered approach.
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#6BBAE0] text-2xl">✓</span>
+                            State-of-the-art medical facilities and technology.
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#6BBAE0] text-2xl">✓</span>
+                            Comprehensive range of medical specialties.
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#6BBAE0] text-2xl">✓</span>
+                            Commitment to continuous learning and professional development.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Right Side - Stats -->
+                <div>
+
+                    <div class="grid grid-cols-2 gap-6">
+
+                        <div class="bg-[#1E293B] p-6 rounded-2xl text-center border border-[#6BBAE0]/20">
+                            <div class="text-4xl font-bold text-[#6BBAE0]">25+</div>
+                            <p class="text-gray-300 mt-2">Experienced Doctors</p>
+                        </div>
+
+                        <div class="bg-[#1E293B] p-6 rounded-2xl text-center border border-[#6BBAE0]/20">
+                            <div class="text-4xl font-bold text-[#6BBAE0]">100+</div>
+                            <p class="text-gray-300 mt-2">Happy Patients</p>
+                        </div>
+
+                        <div class="bg-[#1E293B] p-6 rounded-2xl text-center border border-[#6BBAE0]/20">
+                            <div class="text-4xl font-bold text-[#6BBAE0]">15+</div>
+                            <p class="text-gray-300 mt-2">Years of Excellence</p>
+                        </div>
+
+                        <div class="bg-[#1E293B] p-6 rounded-2xl text-center border border-[#6BBAE0]/20">
+                            <div class="text-4xl font-bold text-[#6BBAE0]">5+</div>
+                            <p class="text-gray-300 mt-2">Medical Specialties</p>
+                        </div>
+
+                        <div class="bg-[#1E293B] p-6 rounded-2xl text-center border border-[#6BBAE0]/20">
+                            <div class="text-4xl font-bold text-[#6BBAE0]">24/7</div>
+                            <p class="text-gray-300 mt-2">Emergency Care</p>
+                        </div>
+
+                        <div class="bg-[#1E293B] p-6 rounded-2xl text-center border border-[#6BBAE0]/20">
+                            <div class="text-4xl font-bold text-[#6BBAE0]">100%</div>
+                            <p class="text-gray-300 mt-2">Patient Satisfaction</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COMMITMENT & APPOINTMENT -->
+    <section class="bg-[#0F172A] py-20 border-t border-[#1E293B]">
+        <div class="max-w-7xl mx-auto px-8">
+
+            <div class="grid md:grid-cols-2 gap-16">
+
+                <!-- Our Commitment -->
+                <div>
+
+                    <span
+                        class="inline-block bg-[#6BBAE0]/20 text-[#6BBAE0] px-6 py-2 rounded-full text-sm font-bold border border-[#6BBAE0]/40">
+                        Our Commitment
+                    </span>
+
+                    <h2 class="mt-6 text-4xl font-bold text-white">
+                        Our
+                        <span class="text-[#6BBAE0]">Commitment</span>
+                    </h2>
+
+                    <p class="mt-6 text-gray-300 leading-8">
+                        We are committed to providing the highest quality healthcare services to our patients.
+                        Our team of dedicated professionals works tirelessly to ensure that every patient
+                        receives personalized care and attention.
+                    </p>
+
+                    <div class="mt-8 flex items-center gap-4">
+                        <div class="w-16 h-16 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center">
+                            <i class="fas fa-heart text-[#6BBAE0] text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold">Patient First</h4>
+                            <p class="text-gray-400 text-sm">Your health is our top priority</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Appointment Process -->
+                <div>
+
+                    <span
+                        class="inline-block bg-[#6BBAE0]/20 text-[#6BBAE0] px-6 py-2 rounded-full text-sm font-bold border border-[#6BBAE0]/40">
+                        Easy Booking
+                    </span>
+
+                    <h2 class="mt-6 text-4xl font-bold text-white">
+                        Appointment
+                        <span class="text-[#6BBAE0]">Process</span>
+                    </h2>
+
+                    <p class="mt-6 text-gray-300 leading-8">
+                        Booking an appointment with our specialists is easy and convenient.
+                        You can schedule a visit online or by calling our reservation line.
+                        Our staff will assist you in finding the most suitable time for your consultation.
+                    </p>
+
+                    <div class="mt-8 flex flex-wrap gap-4">
+
+                        <a href="applications.html"
+                            class="bg-[#6BBAE0] text-[#0F172A] px-7 py-3 rounded-lg font-semibold hover:bg-white transition duration-300">
+
+                            Book Online Now
+
+                        </a>
+
+                        <a href="tel:+917904019592"
+                            class="border-2 border-[#6BBAE0] text-[#6BBAE0] px-7 py-3 rounded-lg font-semibold hover:bg-[#6BBAE0] hover:text-[#0F172A] transition duration-300">
+
+                            <i class="fas fa-phone mr-2"></i> Call Us
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#0F172A] text-white pt-16 pb-8 border-t border-[#1E293B]">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+            <div class="grid md:grid-cols-4 gap-10">
+
+                <!-- Logo & About -->
+                <div>
+
+                    <h2 class="text-2xl font-bold text-[#6BBAE0]">
+                        ABI CARE
+                    </h2>
+
+                    <p class="mt-4 text-gray-300 leading-7">
+
+                        ABI CARE is committed to providing secure,
+                        compassionate and accessible healthcare
+                        services through modern technology.
+
+                    </p>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+
+                    <h3 class="text-xl font-semibold text-[#6BBAE0] mb-5">
+                        Quick Links
+                    </h3>
+
+                    <ul class="space-y-3 text-gray-300">
+
+                        <li><a href="home.html" class="hover:text-white">Home</a></li>
+
+                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+
+                        <li><a href="doctors.html" class="text-white">Doctors</a></li>
+
+                        <li><a href="departments.html" class="hover:text-white">Departments</a></li>
+
+                        <li><a href="applications.html" class="hover:text-white">Book Appointment</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+                <div>
+
+                    <h3 class="text-xl font-semibold text-[#6BBAE0] mb-5">
+                        Contact Us
+                    </h3>
+
+                    <div class="space-y-3 text-gray-300">
+
+                        <p>📧 abicare2000@gmail.com</p>
+
+                        <p>📞 +91 7904019592</p>
+
+                        <p>📍 Chennai, Tamil Nadu, India</p>
+
+                        <p>🕒 24 × 7 Emergency Services</p>
+
+                    </div>
+
+                </div>
+
+                <!-- Follow Us -->
+                <div>
+
+                    <h3 class="text-xl font-semibold text-[#6BBAE0] mb-5">
+                        Follow Us
+                    </h3>
+
+                    <div class="flex gap-4 mt-5">
+
+                        <!-- Facebook -->
+                        <a href="https://facebook.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://instagram.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+
+                        <!-- X (Twitter) -->
+                        <a href="https://x.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fa-brands fa-x-twitter text-xl"></i>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a href="https://youtube.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="mt-8">
+
+                        <a href="#" class="block text-gray-300 hover:text-white mb-2">
+                            Privacy Policy
+                        </a>
+
+                        <a href="#" class="block text-gray-300 hover:text-white">
+                            Terms & Conditions
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr class="border-gray-700 my-10">
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+
+                <p class="text-gray-400 text-sm">
+
+                    © 2026 ABI CARE. All Rights Reserved.
+
+                </p>
+
+                <p class="text-gray-400 text-sm mt-4 md:mt-0">
+
+                    Designed with ❤️ for Better Healthcare.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
 
 </body>
+
 </html>

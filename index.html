@@ -1,61 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-    <div>
-        <nav>
-             <img src="Screenshot 2026-07-07 120946.png" widtha="80" height="80" alt="Logo">
-            
-            <a href="#">HOME</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="#">DOCTERS</a>
-            <a href="#">DEPARTMENT</a>
-            <a href="#">APPLICATIONS</a>
-        </nav>
-        <hr>
-    </div>
-
-    <div>
-        <h1>Your Health, Our Priority</h1>
-        <h2>Experience smarter healthcare management with ABI CARE. Book appointments, access medical records, connect with healthcare professionals, and manage hospital services—all in one secure, reliable, and easy-to-use platform.</h2>
-        <h2>Simple. Secure. Compassionate.</h2>
-    </div>
-    <hr>
-
-    <div>
-        <center><h2>Our Services</h2></center>
-        <video src="Godzilla Vs Kong (2021) BluRay720p - x264 - [Tam + Tel + Hin.mkv"></video>
-    </div>
-    <hr>
 
 
+    <!-- Navbar -->
+    <nav class="bg-[#0F172A] shadow-lg sticky top-0 z-50">
+        <div class="w-full px-0">
+            <div class="flex items-center justify-between h-20">
 
-    <div>
-        <footer>
-            <img src="Screenshot 2026-07-07 120946.png" widtha="80" height="80" alt="Logo">
-            <p>Connect with us:</p>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="Gemini_Generated_Image_r3w7g9r3w7g9r3w7-clean.png" alt="ABI CARE Logo" class="h-20 w-25">
+                </div>
 
-            <center>
-                <p>© 2024 ABI CARE. All rights reserved.</p>
-                <p>Contact Us:</p>
-                <p>Email: abicare2000@gmail.com</p>
-                <p>Phone: +1 (123) 456-7890</p>
-            </center>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
 
-            <div align="right">
-                <p>Terms of Service</p>
-                <p>Privacy Policy</p>
+                    <a href="home.html" class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        HOME
+                    </a>
+
+                    <a href="about.html" class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        ABOUT US
+                    </a>
+
+                    <a href="doc.html"
+                        class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        DOCTORS
+                    </a>
+
+                    <a href="dep.html"
+                        class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        DEPARTMENTS
+                    </a>
+
+                    <a href="application.html"
+                        class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        APPLICATIONS
+                    </a>
+
+                </div>
+
+                <!-- Right Side -->
+                <!-- Profile Dropdown -->
+                <div class="relative">
+
+                    <!-- Profile Icon -->
+                    <button id="profileBtn"
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-[#6BBAE0] hover:bg-white transition">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                            stroke="#0F172A" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.964 0a9 9 0 10-11.964 0m11.964 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div id="profileMenu"
+                        class="hidden absolute right-0 mt-3 w-48 bg-white rounded-lg shadow-xl overflow-hidden">
+
+                        <a href="profile.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">
+                            👤 My Profile
+                        </a>
+
+                        <a href="appointment.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">
+                            📅 My Appointments
+                        </a>
+
+                        <a href="settings.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">
+                            ⚙️ Settings
+                        </a>
+
+                        <hr>
+
+                        <a href="logout.html" class="block px-4 py-3 text-red-600 hover:bg-red-50">
+                            🚪 Logout
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-[#6BBAE0] text-3xl">
+                    ☰
+                </button>
+
             </div>
 
-            
-        </footer>
-    </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-5">
+
+            <a href="home.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                HOME
+            </a>
+
+            <a href="about.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                ABOUT US
+            </a>
+
+            <a href="doc.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                DOCTORS
+            </a>
+
+            <a href="dep.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                DEPARTMENTS
+            </a>
+
+            <a href="application.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                APPLICATIONS
+            </a>
+
+            <!-- Mobile Profile Button -->
+            <button
+                class="mt-4 w-full bg-[#6BBAE0] text-[#0F172A] py-2 rounded-full font-semibold hover:bg-white transition">
+                Profile
+            </button>
+
+        </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        const profileBtn = document.getElementById("profileBtn");
+        const profileMenu = document.getElementById("profileMenu");
+
+        profileBtn.addEventListener("click", () => {
+            profileMenu.classList.toggle("hidden");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (e) {
+            if (!profileBtn.contains(e.target) && !profileMenu.contains(e.target)) {
+                profileMenu.classList.add("hidden");
+            }
+        });
+    </script>
+
+
+    <!-- HERO SECTION -->
+    <section class="bg-[#0F172A] text-white">
+
+        <div class="max-w-7xl mx-auto px-8 py-24">
+
+            <div class="grid lg:grid-cols-[40%_60%] items-center gap-8">
+
+                <!-- Left Content -->
+                <div>
+
+                    <span
+                        class="inline-block bg-[#6BBAE0]/20 text-[#6BBAE0] px-8 py-3 rounded-full text-lg font-bold shadow-lg border border-[#6BBAE0]/40">
+                        Welcome to ABI CARE
+                    </span>
+
+                    <h1 class="mt-6 text-5xl md:text-6xl font-bold leading-tight">
+                        Your Health,
+                        <span class="text-[#6BBAE0]">
+                            Our Priority
+                        </span>
+                    </h1>
+
+                    <p class="mt-8 text-lg text-gray-300 leading-8">
+
+                        Experience smarter healthcare management with
+                        <span class="font-semibold text-[#6BBAE0]">
+                            ABI CARE
+                        </span>.
+
+                        Book appointments, access medical records,
+                        connect with experienced doctors, and manage
+                        your healthcare journey through one secure,
+                        reliable and easy-to-use platform.
+
+                    </p>
+
+                    <h3 class="mt-6 text-xl text-[#F8B4C8] font-semibold">
+                        Simple. Secure. Compassionate.
+                    </h3>
+
+                    <!-- Buttons -->
+                    <div class="mt-10 flex flex-wrap gap-5">
+
+                        <a href="applications.html"
+                            class="bg-[#6BBAE0] text-[#0F172A] px-7 py-3 rounded-lg font-semibold hover:bg-white transition duration-300">
+
+                            Book Appointment
+
+                        </a>
+
+                        <a href="about.html"
+                            class="border-2 border-[#6BBAE0] text-[#6BBAE0] px-7 py-3 rounded-lg font-semibold hover:bg-[#6BBAE0] hover:text-[#0F172A] transition duration-300">
+
+                            Learn More
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Image -->
+                <img src="Gemini_Generated_Image_ei62snei62snei62-clean.png" alt="Doctor"
+                    class="w-[700px] h-[700px] object-cover rounded-[40px] shadow-2xl border-4 border-[#6BBAE0]">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- OUR SERVICES -->
+    <section class="bg-[#0F172A] py-20">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Heading -->
+            <div class="text-center mb-12">
+
+                <h2 class="text-4xl font-bold text-[#6BBAE0]">
+                    Our Services
+                </h2>
+
+                <p class="mt-4 text-lg text-[#E091AC] leading-8">
+                    Discover how ABI CARE makes healthcare simple, secure, and accessible for everyone.
+                </p>
+
+            </div>
+
+            <!-- Video -->
+            <div class="flex justify-center">
+
+                <video class="w-full max-w-5xl h-[600px] object-cover rounded-3xl shadow-2xl border-4 border-[#6BBAE0]"
+                    autoplay muted loop playsinline controls>
+
+                    <source src="samp.webm" type="video/mp4">
+
+                    Your browser does not support the video tag.
+
+                </video>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#0F172A] text-white pt-16 pb-8">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+            <div class="grid md:grid-cols-4 gap-10">
+
+                <!-- Logo & About -->
+                <div>
+
+                    <h2 class="text-2xl font-bold text-[#6BBAE0]">
+                        ABI CARE
+                    </h2>
+
+                    <p class="mt-4 text-gray-300 leading-7">
+
+                        ABI CARE is committed to providing secure,
+                        compassionate and accessible healthcare
+                        services through modern technology.
+
+                    </p>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+
+                    <h3 class="text-xl font-semibold text-[#6BBAE0] mb-5">
+                        Quick Links
+                    </h3>
+
+                    <ul class="space-y-3 text-gray-300">
+
+                        <li><a href="home.html" class="hover:text-white">Home</a></li>
+
+                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+
+                        <li><a href="doc.html" class="hover:text-white">Doctors</a></li>
+
+                        <li><a href="dep.html" class="hover:text-white">Departments</a></li>
+
+                        <li><a href="application.html" class="hover:text-white">Book Appointment</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+                <div>
+
+                    <h3 class="text-xl font-semibold text-[#6BBAE0] mb-5">
+                        Contact Us
+                    </h3>
+
+                    <div class="space-y-3 text-gray-300">
+
+                        <p>📧 abicare2000@gmail.com</p>
+
+                        <p>📞 +91 7904019592</p>
+
+                        <p>📍 Chennai, Tamil Nadu, India</p>
+
+                        <p>🕒 24 × 7 Emergency Services</p>
+
+                    </div>
+
+                </div>
+
+                <!-- Follow Us -->
+                <div>
+
+                    <h3 class="text-xl font-semibold text-[#6BBAE0] mb-5">
+                        Follow Us
+                    </h3>
+
+                    <div class="flex gap-4 mt-5">
+
+                        <!-- Facebook -->
+                        <a href="https://facebook.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://instagram.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+
+                        <!-- X (Twitter) -->
+                        <a href="https://x.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fa-brands fa-x-twitter text-xl"></i>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a href="https://youtube.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="mt-8">
+
+                        <a href="t&c.html" class="block text-gray-300 hover:text-white mb-2">
+                            Privacy Policy
+                        </a>
+
+                        <a href="t&c.html" class="block text-gray-300 hover:text-white">
+                            Terms & Conditions
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr class="border-gray-700 my-10">
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+
+                <p class="text-gray-400 text-sm">
+
+                    © 2026 ABI CARE. All Rights Reserved.
+
+                </p>
+
+                <p class="text-gray-400 text-sm mt-4 md:mt-0">
+
+                    Designed with ❤️ for Better Healthcare.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
 </body>
+
 </html>

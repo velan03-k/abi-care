@@ -1,148 +1,784 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ABI CARE - Book Appointment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-        <div>
-        <nav>
-             <img src="Screenshot 2026-07-07 120946.png" widtha="80" height="80" alt="Logo">
-            
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="doc.html">DOCTERS</a>
-            <a href="dep.html">DEPARTMENT</a>
-            <a href="application.html">APPLICATIONS</a>
-        </nav>
-        <hr>
-    </div>
 
-    <div>
-        <h2>Book an Appointment</h2>
-        <h2>Your Health Begins with the Right Doctor</h2>
-        <p>Booking an appointment with a doctor has never been easier. Our user-friendly platform allows you to schedule appointments with healthcare professionals at your convenience. Whether you need a routine check-up or specialized care, our system ensures a seamless booking experience.</p>
-        <button>Book Now</button>
-        <a href="doc.html"><button>View Doctors</button></a>
-        <hr>
-    </div>
+    <!-- Navbar -->
+    <nav class="bg-[#0F172A] shadow-lg sticky top-0 z-50">
+        <div class="w-full px-0">
+            <div class="flex items-center justify-between h-20">
 
-    <div>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="Gemini_Generated_Image_r3w7g9r3w7g9r3w7-clean.png" alt="ABI CARE Logo" class="h-20 w-25">
+                </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
 
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required><br><br>
+                    <a href="home.html" class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        HOME
+                    </a>
 
-            <label for="department">Department:</label>
-            <select id="department" name="department" required>
-                <option value="">Select Department</option>
-                <option value="cardiology">Cardiology</option>
-                <option value="neurology">Neurology</option>
-                <option value="orthopedics">Orthopedics</option>
-                <option value="pediatrics">Pediatrics</option>
-                <option value="dermatology">Dermatology</option>
-                <option value="gynecology">Gynecology</option>
-            </select><br><br>
+                    <a href="about.html" class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        ABOUT US
+                    </a>
 
-            <label for="date">Preferred Date:</label>
-            <input type="date" id="date" name="date" required><br><br>
+                    <a href="doctors.html" class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        DOCTORS
+                    </a>
 
-            <label for="time">Preferred Time:</label>
-            <input type="time" id="time" name="time" required><br><br>
+                    <a href="departments.html" class="text-[#6BBAE0] font-semibold hover:text-white transition duration-300">
+                        DEPARTMENTS
+                    </a>
 
-            <label for="message">Reason for Visit:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                    <a href="applications.html" class="text-white font-semibold border-b-2 border-[#6BBAE0] transition duration-300">
+                        APPLICATIONS
+                    </a>
 
-            <input type="submit" value="Book Appointment">
-        </form>
-        <hr>
-    </div>
+                </div>
 
-    <div>
-        <h2>Need Help?</h2>
-        <h3>Contact Our Support Team</h3>
-        <p>If you have any questions or need assistance with booking an appointment, our support team is here to help. You can reach us via email, phone, or through our online contact form. We are committed to providing you with the support you need to ensure a smooth and hassle-free experience.</p>
-        <p>Phone: 1-800-123-4567</p>
-        <p>Email: support@abicare.com</p>
-    </div>
+                <!-- Right Side -->
+                <!-- Profile Dropdown -->
+                <div class="relative">
 
-    <div>
-        <h2>Enquire About Our Services</h2>
-        <h3>We Value Your Feedback</h3>
-        <p>If you have any questions, comments, or feedback regarding our services, we encourage you to reach out to us. Your input is invaluable in helping us improve our platform and provide the best possible experience for our users. Please fill out the enquiry form below, and our team will get back to you promptly.</p>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
+                    <!-- Profile Icon -->
+                    <button id="profileBtn"
+                        class="flex items-center justify-center w-10 h-10 rounded-full bg-[#6BBAE0] hover:bg-white transition">
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                            stroke="#0F172A" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.964 0a9 9 0 10-11.964 0m11.964 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
 
-            <label for="message">Your Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                    </button>
 
-            <input type="submit" value="Submit Enquiry">
-        </form>
-        <hr>
-    </div>
+                    <!-- Dropdown Menu -->
+                    <div id="profileMenu"
+                        class="hidden absolute right-0 mt-3 w-48 bg-white rounded-lg shadow-xl overflow-hidden">
 
+                        <a href="profile.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">
+                            👤 My Profile
+                        </a>
 
-    <div>
-        <h2>Get in Touch with ABI CARE</h2>
-        <h3>We're Here to Answer Your Questions</h3>
-        <p>If you have any questions, concerns, or feedback, please don't hesitate to reach out to us. Our dedicated support team is available to assist you with any inquiries you may have regarding our services, appointments, or healthcare management solutions.</p>
-        <button>Submit Enquiry</button>
-        <hr>
-    </div>
+                        <a href="appointments.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">
+                            📅 My Appointments
+                        </a>
 
-    <div>
-        <center><h2>Frequently Asked Questions</h2></center>
-        <center>
-        <details>
-            <summary>What is a Hospital Management System?</summary>
-            <p>A Hospital Management System (HMS) is a software solution designed to streamline and automate various aspects of hospital operations, including patient records, appointment scheduling, billing, and resource management.</p>
-        </details>
+                        <a href="settings.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">
+                            ⚙️ Settings
+                        </a>
 
-        <details>
-            <summary>How do I book an appointment?</summary>
-            <p>You can book an appointment through our website or mobile app. Simply select the doctor you want to see, choose a convenient time slot, and confirm your booking.</p>
-        </details>
+                        <hr>
 
-        <details>
-            <summary>What are the benefits of using ABI CARE?</summary>
-            <p>Using ABI CARE offers several benefits, including convenient appointment booking, easy access to medical records, seamless communication with healthcare professionals, and efficient management of hospital services.</p>
-        </details>
-        </center>
-    </div>
+                        <a href="logout.html" class="block px-4 py-3 text-red-600 hover:bg-red-50">
+                            🚪 Logout
+                        </a>
 
-    <div>
-        <footer>
-            <img src="Screenshot 2026-07-07 120946.png" widtha="80" height="80" alt="Logo">
-            <p>Connect with us:</p>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
+                    </div>
 
-            <center>
-                <p>© 2024 ABI CARE. All rights reserved.</p>
-                <p>Contact Us:</p>
-                <p>Email: abicare2000@gmail.com</p>
-                <p>Phone: +1 (123) 456-7890</p>
-            </center>
+                </div>
 
-            <div align="right">
-                <p>Terms of Service</p>
-                <p>Privacy Policy</p>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-[#6BBAE0] text-3xl">
+                    ☰
+                </button>
+
             </div>
 
-            
-        </footer>
-    </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-5">
+
+            <a href="home.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                HOME
+            </a>
+
+            <a href="about.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                ABOUT US
+            </a>
+
+            <a href="doctors.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                DOCTORS
+            </a>
+
+            <a href="departments.html" class="block py-3 text-[#6BBAE0] hover:text-white">
+                DEPARTMENTS
+            </a>
+
+            <a href="applications.html" class="block py-3 text-white font-semibold">
+                APPLICATIONS
+            </a>
+
+            <!-- Mobile Profile Button -->
+            <button
+                class="mt-4 w-full bg-[#6BBAE0] text-[#0F172A] py-2 rounded-full font-semibold hover:bg-white transition">
+                Profile
+            </button>
+
+        </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        const profileBtn = document.getElementById("profileBtn");
+        const profileMenu = document.getElementById("profileMenu");
+
+        profileBtn.addEventListener("click", () => {
+            profileMenu.classList.toggle("hidden");
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (e) {
+            if (!profileBtn.contains(e.target) && !profileMenu.contains(e.target)) {
+                profileMenu.classList.add("hidden");
+            }
+        });
+    </script>
+
+    <!-- HERO SECTION - BOOK APPOINTMENT -->
+    <section class="bg-[#0F172A] text-white">
+
+        <div class="max-w-7xl mx-auto px-8 py-24">
+
+            <div class="grid lg:grid-cols-[45%_55%] items-center gap-12">
+
+                <!-- Left Content -->
+                <div>
+
+                    <span
+                        class="inline-block bg-[#6BBAE0]/20 text-[#6BBAE0] px-8 py-3 rounded-full text-lg font-bold shadow-lg border border-[#6BBAE0]/40">
+                        Book Appointment
+                    </span>
+
+                    <h1 class="mt-6 text-5xl md:text-6xl font-bold leading-tight">
+                        Your Health Begins
+                        <span class="text-[#6BBAE0]">
+                            with the Right Doctor
+                        </span>
+                    </h1>
+
+                    <p class="mt-8 text-lg text-gray-300 leading-8">
+
+                        Booking an appointment with a doctor has never been easier.
+                        Our user-friendly platform allows you to schedule appointments
+                        with healthcare professionals at your convenience. Whether you need
+                        a routine check-up or <span class="font-semibold text-[#6BBAE0]">specialized care</span>,
+                        our system ensures a seamless booking experience.
+
+                    </p>
+
+                    <h3 class="mt-6 text-xl text-[#F8B4C8] font-semibold">
+                        Quick. Easy. Reliable.
+                    </h3>
+
+                    <!-- Buttons -->
+                    <div class="mt-10 flex flex-wrap gap-5">
+
+                        <a href="#booking-form"
+                            class="bg-[#6BBAE0] text-[#0F172A] px-7 py-3 rounded-lg font-semibold hover:bg-white transition duration-300">
+
+                            Book Now
+
+                        </a>
+
+                        <a href="doctors.html"
+                            class="border-2 border-[#6BBAE0] text-[#6BBAE0] px-7 py-3 rounded-lg font-semibold hover:bg-[#6BBAE0] hover:text-[#0F172A] transition duration-300">
+
+                            View Doctors
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Image -->
+                <img src="Gemini_Generated_Image_ei62snei62snei62-clean.png" alt="Book Appointment"
+                    class="w-full h-[500px] object-cover rounded-[40px] shadow-2xl border-4 border-[#6BBAE0]">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BOOKING FORM SECTION -->
+    <section id="booking-form" class="bg-[#0F172A] py-20 border-t border-[#1E293B]">
+        <div class="max-w-4xl mx-auto px-8">
+
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+
+                <span
+                    class="inline-block bg-[#6BBAE0]/20 text-[#6BBAE0] px-6 py-2 rounded-full text-sm font-bold border border-[#6BBAE0]/40">
+                    Schedule Your Visit
+                </span>
+
+                <h2 class="mt-6 text-4xl font-bold text-white">
+                    Book an <span class="text-[#6BBAE0]">Appointment</span>
+                </h2>
+
+                <p class="mt-4 text-gray-300 leading-7">
+                    Fill in the details below and our team will confirm your appointment shortly.
+                </p>
+
+            </div>
+
+            <!-- Form -->
+            <div class="bg-[#1E293B] rounded-2xl p-8 md:p-12 border border-[#6BBAE0]/20">
+
+                <form>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+
+                        <!-- Name -->
+                        <div>
+                            <label for="name" class="block text-[#6BBAE0] font-semibold mb-2">
+                                Full Name <span class="text-red-400">*</span>
+                            </label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-[#6BBAE0] font-semibold mb-2">
+                                Email Address <span class="text-red-400">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                        </div>
+
+                        <!-- Phone -->
+                        <div>
+                            <label for="phone" class="block text-[#6BBAE0] font-semibold mb-2">
+                                Phone Number <span class="text-red-400">*</span>
+                            </label>
+                            <input type="tel" id="phone" name="phone" required
+                                class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                        </div>
+
+                        <!-- Department -->
+                        <div>
+                            <label for="department" class="block text-[#6BBAE0] font-semibold mb-2">
+                                Department <span class="text-red-400">*</span>
+                            </label>
+                            <select id="department" name="department" required
+                                class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition cursor-pointer appearance-none">
+
+                                <option value="">Select Department</option>
+                                <option value="cardiology">Cardiology</option>
+                                <option value="neurology">Neurology</option>
+                                <option value="orthopedics">Orthopedics</option>
+                                <option value="pediatrics">Pediatrics</option>
+                                <option value="dermatology">Dermatology</option>
+                                <option value="gynecology">Gynecology</option>
+
+                            </select>
+                        </div>
+
+                        <!-- Preferred Date -->
+                        <div>
+                            <label for="date" class="block text-[#6BBAE0] font-semibold mb-2">
+                                Preferred Date <span class="text-red-400">*</span>
+                            </label>
+                            <input type="date" id="date" name="date" required
+                                class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                        </div>
+
+                        <!-- Preferred Time -->
+                        <div>
+                            <label for="time" class="block text-[#6BBAE0] font-semibold mb-2">
+                                Preferred Time <span class="text-red-400">*</span>
+                            </label>
+                            <input type="time" id="time" name="time" required
+                                class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                        </div>
+
+                    </div>
+
+                    <!-- Reason for Visit -->
+                    <div class="mt-6">
+                        <label for="message" class="block text-[#6BBAE0] font-semibold mb-2">
+                            Reason for Visit <span class="text-red-400">*</span>
+                        </label>
+                        <textarea id="message" name="message" rows="4" required
+                            class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition resize-none"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="mt-8">
+                        <button type="submit"
+                            class="w-full bg-[#6BBAE0] text-[#0F172A] py-4 rounded-lg font-bold text-lg hover:bg-white transition duration-300">
+                            <i class="fas fa-calendar-check mr-2"></i>
+                            Book Appointment
+                        </button>
+                    </div>
+
+                    <p class="mt-4 text-center text-gray-400 text-sm">
+                        <i class="fas fa-lock text-[#6BBAE0] mr-1"></i>
+                        Your information is secure and confidential
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEED HELP SECTION -->
+    <section class="bg-[#0F172A] py-20 border-t border-[#1E293B]">
+        <div class="max-w-7xl mx-auto px-8">
+
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+
+                <!-- Left Side -->
+                <div>
+
+                    <span
+                        class="inline-block bg-[#6BBAE0]/20 text-[#6BBAE0] px-6 py-2 rounded-full text-sm font-bold border border-[#6BBAE0]/40">
+                        Support
+                    </span>
+
+                    <h2 class="mt-6 text-4xl font-bold text-white">
+                        Need <span class="text-[#6BBAE0]">Help?</span>
+                    </h2>
+
+                    <h3 class="mt-3 text-xl text-[#F8B4C8] font-semibold">
+                        Contact Our Support Team
+                    </h3>
+
+                    <p class="mt-6 text-gray-300 leading-8">
+                        If you have any questions or need assistance with booking an appointment,
+                        our support team is here to help. You can reach us via email, phone, or
+                        through our online contact form. We are committed to providing you with
+                        the support you need to ensure a smooth and hassle-free experience.
+                    </p>
+
+                    <div class="mt-8 space-y-4">
+
+                        <div class="flex items-center gap-4 bg-[#1E293B] p-4 rounded-lg border border-[#6BBAE0]/20">
+                            <div class="w-12 h-12 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center">
+                                <i class="fas fa-phone text-[#6BBAE0] text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Phone</p>
+                                <p class="text-white font-semibold">1-800-123-4567</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-[#1E293B] p-4 rounded-lg border border-[#6BBAE0]/20">
+                            <div class="w-12 h-12 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center">
+                                <i class="fas fa-envelope text-[#6BBAE0] text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Email</p>
+                                <p class="text-white font-semibold">support@abicare.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-[#1E293B] p-4 rounded-lg border border-[#6BBAE0]/20">
+                            <div class="w-12 h-12 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center">
+                                <i class="fas fa-clock text-[#6BBAE0] text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Support Hours</p>
+                                <p class="text-white font-semibold">24/7 Available</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Side - FAQ -->
+                <div>
+
+                    <span
+                        class="inline-block bg-[#6BBAE0]/20 text-[#6BBAE0] px-6 py-2 rounded-full text-sm font-bold border border-[#6BBAE0]/40">
+                        FAQ
+                    </span>
+
+                    <h2 class="mt-6 text-4xl font-bold text-white">
+                        Frequently Asked
+                        <span class="text-[#6BBAE0]">Questions</span>
+                    </h2>
+
+                    <div class="mt-8 space-y-4">
+
+                        <details class="bg-[#1E293B] rounded-lg border border-[#6BBAE0]/20 overflow-hidden">
+                            <summary class="px-6 py-4 text-white font-semibold cursor-pointer hover:text-[#6BBAE0] transition flex items-center justify-between">
+                                <span>What is a Hospital Management System?</span>
+                                <i class="fas fa-chevron-down text-[#6BBAE0]"></i>
+                            </summary>
+                            <p class="px-6 pb-4 text-gray-300 leading-7">
+                                A Hospital Management System (HMS) is a software solution designed to streamline and
+                                automate various aspects of hospital operations, including patient records, appointment
+                                scheduling, billing, and resource management.
+                            </p>
+                        </details>
+
+                        <details class="bg-[#1E293B] rounded-lg border border-[#6BBAE0]/20 overflow-hidden">
+                            <summary class="px-6 py-4 text-white font-semibold cursor-pointer hover:text-[#6BBAE0] transition flex items-center justify-between">
+                                <span>How do I book an appointment?</span>
+                                <i class="fas fa-chevron-down text-[#6BBAE0]"></i>
+                            </summary>
+                            <p class="px-6 pb-4 text-gray-300 leading-7">
+                                You can book an appointment through our website or mobile app. Simply select the doctor
+                                you want to see, choose a convenient time slot, and confirm your booking.
+                            </p>
+                        </details>
+
+                        <details class="bg-[#1E293B] rounded-lg border border-[#6BBAE0]/20 overflow-hidden">
+                            <summary class="px-6 py-4 text-white font-semibold cursor-pointer hover:text-[#6BBAE0] transition flex items-center justify-between">
+                                <span>What are the benefits of using ABI CARE?</span>
+                                <i class="fas fa-chevron-down text-[#6BBAE0]"></i>
+                            </summary>
+                            <p class="px-6 pb-4 text-gray-300 leading-7">
+                                Using ABI CARE offers several benefits, including convenient appointment booking, easy
+                                access to medical records, seamless communication with healthcare professionals, and
+                                efficient management of hospital services.
+                            </p>
+                        </details>
+
+                        <details class="bg-[#1E293B] rounded-lg border border-[#6BBAE0]/20 overflow-hidden">
+                            <summary class="px-6 py-4 text-white font-semibold cursor-pointer hover:text-[#6BBAE0] transition flex items-center justify-between">
+                                <span>Is my information secure?</span>
+                                <i class="fas fa-chevron-down text-[#6BBAE0]"></i>
+                            </summary>
+                            <p class="px-6 pb-4 text-gray-300 leading-7">
+                                Yes, we take data security very seriously. All your personal and medical information is
+                                encrypted and stored securely in compliance with healthcare privacy regulations.
+                            </p>
+                        </details>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ENQUIRY & CONTACT SECTION -->
+    <section class="bg-[#0F172A] py-20 border-t border-[#1E293B]">
+        <div class="max-w-7xl mx-auto px-8">
+
+            <div class="grid md:grid-cols-2 gap-16">
+
+                <!-- Enquiry Form -->
+                <div>
+
+                    <span
+                        class="inline-block bg-[#6BBAE0]/20 text-[#6BBAE0] px-6 py-2 rounded-full text-sm font-bold border border-[#6BBAE0]/40">
+                        Get In Touch
+                    </span>
+
+                    <h2 class="mt-6 text-4xl font-bold text-white">
+                        Enquire About
+                        <span class="text-[#6BBAE0]">Our Services</span>
+                    </h2>
+
+                    <p class="mt-4 text-gray-300 leading-7">
+                        If you have any questions, comments, or feedback regarding our services, we encourage you to
+                        reach out to us. Your input is invaluable in helping us improve our platform and provide the
+                        best possible experience for our users.
+                    </p>
+
+                    <div class="mt-8 bg-[#1E293B] rounded-2xl p-8 border border-[#6BBAE0]/20">
+
+                        <form>
+
+                            <div class="space-y-4">
+
+                                <div>
+                                    <label for="enquiry-name" class="block text-[#6BBAE0] font-semibold mb-2">
+                                        Full Name <span class="text-red-400">*</span>
+                                    </label>
+                                    <input type="text" id="enquiry-name" name="name" required
+                                        class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                                </div>
+
+                                <div>
+                                    <label for="enquiry-email" class="block text-[#6BBAE0] font-semibold mb-2">
+                                        Email Address <span class="text-red-400">*</span>
+                                    </label>
+                                    <input type="email" id="enquiry-email" name="email" required
+                                        class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                                </div>
+
+                                <div>
+                                    <label for="enquiry-message" class="block text-[#6BBAE0] font-semibold mb-2">
+                                        Your Message <span class="text-red-400">*</span>
+                                    </label>
+                                    <textarea id="enquiry-message" name="message" rows="4" required
+                                        class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition resize-none"></textarea>
+                                </div>
+
+                                <button type="submit"
+                                    class="w-full bg-[#6BBAE0] text-[#0F172A] py-3 rounded-lg font-bold hover:bg-white transition duration-300">
+                                    <i class="fas fa-paper-plane mr-2"></i>
+                                    Submit Enquiry
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+
+                    <span
+                        class="inline-block bg-[#6BBAE0]/20 text-[#6BBAE0] px-6 py-2 rounded-full text-sm font-bold border border-[#6BBAE0]/40">
+                        Contact
+                    </span>
+
+                    <h2 class="mt-6 text-4xl font-bold text-white">
+                        Get in Touch with
+                        <span class="text-[#6BBAE0]">ABI CARE</span>
+                    </h2>
+
+                    <h3 class="mt-3 text-xl text-[#F8B4C8] font-semibold">
+                        We're Here to Answer Your Questions
+                    </h3>
+
+                    <p class="mt-6 text-gray-300 leading-8">
+                        If you have any questions, concerns, or feedback, please don't hesitate to reach out to us.
+                        Our dedicated support team is available to assist you with any inquiries you may have
+                        regarding our services, appointments, or healthcare management solutions.
+                    </p>
+
+                    <div class="mt-8 space-y-4">
+
+                        <div class="flex items-center gap-4 bg-[#1E293B] p-5 rounded-xl border border-[#6BBAE0]/20 hover:border-[#6BBAE0] transition">
+                            <div class="w-14 h-14 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-[#6BBAE0] text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Address</p>
+                                <p class="text-white font-semibold">Chennai, Tamil Nadu, India</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-[#1E293B] p-5 rounded-xl border border-[#6BBAE0]/20 hover:border-[#6BBAE0] transition">
+                            <div class="w-14 h-14 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone-alt text-[#6BBAE0] text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Phone</p>
+                                <p class="text-white font-semibold">+91 7904019592</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-[#1E293B] p-5 rounded-xl border border-[#6BBAE0]/20 hover:border-[#6BBAE0] transition">
+                            <div class="w-14 h-14 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-[#6BBAE0] text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Email</p>
+                                <p class="text-white font-semibold">abicare2000@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-[#1E293B] p-5 rounded-xl border border-[#6BBAE0]/20 hover:border-[#6BBAE0] transition">
+                            <div class="w-14 h-14 rounded-full bg-[#6BBAE0]/20 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock text-[#6BBAE0] text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400 text-sm">Working Hours</p>
+                                <p class="text-white font-semibold">24 × 7 Emergency Services</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#booking-form"
+                            class="inline-block w-full text-center bg-[#6BBAE0]/20 text-[#6BBAE0] px-7 py-3 rounded-lg font-semibold border border-[#6BBAE0]/40 hover:bg-[#6BBAE0] hover:text-[#0F172A] transition duration-300">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Submit Enquiry
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#0F172A] text-white pt-16 pb-8 border-t border-[#1E293B]">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+            <div class="grid md:grid-cols-4 gap-10">
+
+                <!-- Logo & About -->
+                <div>
+
+                    <h2 class="text-2xl font-bold text-[#6BBAE0]">
+                        ABI CARE
+                    </h2>
+
+                    <p class="mt-4 text-gray-300 leading-7">
+
+                        ABI CARE is committed to providing secure,
+                        compassionate and accessible healthcare
+                        services through modern technology.
+
+                    </p>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+
+                    <h3 class="text-xl font-semibold text-[#6BBAE0] mb-5">
+                        Quick Links
+                    </h3>
+
+                    <ul class="space-y-3 text-gray-300">
+
+                        <li><a href="home.html" class="hover:text-white">Home</a></li>
+
+                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+
+                        <li><a href="doctors.html" class="hover:text-white">Doctors</a></li>
+
+                        <li><a href="departments.html" class="hover:text-white">Departments</a></li>
+
+                        <li><a href="applications.html" class="text-white">Book Appointment</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+                <div>
+
+                    <h3 class="text-xl font-semibold text-[#6BBAE0] mb-5">
+                        Contact Us
+                    </h3>
+
+                    <div class="space-y-3 text-gray-300">
+
+                        <p>📧 abicare2000@gmail.com</p>
+
+                        <p>📞 +91 7904019592</p>
+
+                        <p>📍 Chennai, Tamil Nadu, India</p>
+
+                        <p>🕒 24 × 7 Emergency Services</p>
+
+                    </div>
+
+                </div>
+
+                <!-- Follow Us -->
+                <div>
+
+                    <h3 class="text-xl font-semibold text-[#6BBAE0] mb-5">
+                        Follow Us
+                    </h3>
+
+                    <div class="flex gap-4 mt-5">
+
+                        <!-- Facebook -->
+                        <a href="https://facebook.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://instagram.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+
+                        <!-- X (Twitter) -->
+                        <a href="https://x.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fa-brands fa-x-twitter text-xl"></i>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a href="https://youtube.com"
+                            class="w-12 h-12 bg-[#6BBAE0] rounded-full flex items-center justify-center text-[#0F172A] hover:bg-white transition duration-300">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="mt-8">
+
+                        <a href="#" class="block text-gray-300 hover:text-white mb-2">
+                            Privacy Policy
+                        </a>
+
+                        <a href="#" class="block text-gray-300 hover:text-white">
+                            Terms & Conditions
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr class="border-gray-700 my-10">
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+
+                <p class="text-gray-400 text-sm">
+
+                    © 2026 ABI CARE. All Rights Reserved.
+
+                </p>
+
+                <p class="text-gray-400 text-sm mt-4 md:mt-0">
+
+                    Designed with ❤️ for Better Healthcare.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
 
 </body>
+
 </html>
