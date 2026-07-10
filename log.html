@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABI CARE - Login & Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Optional: ensure the image covers the area */
+       .hospital-bg {
+    min-height: 100vh;
+    width: 1000px;
+    background-image: url("./images/Gemini_Generated_Image_ei62snei62snei62-clean.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP LOGO -->
+    <div class="bg-[#0F172A] py-4 px-8 flex items-center">
+        <img src="./images/Gemini_Generated_Image_r3w7g9r3w7g9r3w7.png" alt="ABI CARE Logo" class="h-16 w-auto">
+        <!-- <span class="ml-3 text-2xl font-bold text-[#6BBAE0]">ABI CARE</span> -->
+        <span class="ml-auto text-sm text-gray-400 hidden md:inline">Secure • Compassionate • Accessible</span>
+    </div>
+
+    <!-- TWO-COLUMN LAYOUT -->
+    <div class="flex min-h-screen bg-[#0F172A]">
+
+        <!-- LEFT: FORMS -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-6 md:p-12 overflow-y-auto">
+            <div class="w-full max-w-md">
+
+                <!-- ==================== SIGNUP FORM ==================== -->
+                <div id="signup-form" class="bg-[#1E293B] rounded-2xl p-8 border border-[#6BBAE0]/20">
+                    <h2 class="text-3xl font-bold text-white text-center mb-6">Create <span class="text-[#6BBAE0]">Account</span></h2>
+
+                    <form id="signup" onsubmit="return validation()">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="firstname" class="block text-[#6BBAE0] font-semibold mb-2">First Name</label>
+                                <input type="text" id="firstname" required
+                                    class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                                    <div id="val4"></div>
+                            </div>
+                            <div>
+                                <label for="lastname" class="block text-[#6BBAE0] font-semibold mb-2" id="slname">Last Name</label>
+                                <input type="text" id="lastname" required
+                                    class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                                    <div id="val5"></div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <label for="signup-email" class="block text-[#6BBAE0] font-semibold mb-2" id="email">Email Address</label>
+                            <input type="text" id="signup-email" required
+                                class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                                                                    <div id="val1"></div>
+
+                        </div>
+
+                        <div class="mt-4">
+                            <label for="signup-password" class="block text-[#6BBAE0] font-semibold mb-2" id="pass">Password</label>
+                            <input type="password" id="signup-password" required
+                                class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                                <p class="text-gray-500 text-xs mt-1"><i class="fas fa-info-circle mr-1"></i>Must be 8+ characters, upper, lower, number & symbol.</p>
+                                <div id="val2"></div>
+                        </div>
+
+                        <div class="mt-4">
+                            <label for="confirm-password" class="block text-[#6BBAE0] font-semibold mb-2" id="pass">Confirm Password</label>
+                            <input type="password" id="confirm-password" required
+                                class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                                <div id="val3"></div>
+                        </div>
+
+                        <button type="submit"
+                            class="mt-6 w-full bg-[#6BBAE0] text-[#0F172A] py-3 rounded-lg font-bold text-lg hover:bg-white transition duration-300">
+                            <i class="fas fa-user-plus mr-2"></i> Create Account
+                        </button>
+                    </form>
+
+                    <p class="mt-6 text-center text-gray-400">
+                        Already have an account?
+                        <a href="#" onclick="showForm('login')" class="text-[#6BBAE0] font-semibold hover:text-white transition">Login</a>
+                    </p>
+                </div>
+
+                <!-- ==================== LOGIN FORM ==================== -->
+                <div id="login-form" class="bg-[#1E293B] rounded-2xl p-8 border border-[#6BBAE0]/20 hidden">
+                    <h2 class="text-3xl font-bold text-white text-center mb-6">Welcome <span class="text-[#6BBAE0]">Back</span></h2>
+
+                    <form>
+                        <div>
+                            <label for="login-email" class="block text-[#6BBAE0] font-semibold mb-2">Email Address</label>
+                            <input type="email" id="login-email" required
+                                class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                        </div>
+
+                        <div class="mt-4">
+                            <label for="login-password" class="block text-[#6BBAE0] font-semibold mb-2">Password</label>
+                            <input type="password" id="login-password" required
+                                class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                        </div>
+
+                        <div class="flex items-center justify-between mt-4">
+                            <label class="flex items-center text-gray-300 cursor-pointer">
+                                <input type="checkbox" class="w-4 h-4 mr-2 accent-[#6BBAE0]">
+                                Remember Me
+                            </label>
+                            <a href="#" onclick="showForm('forgot')" class="text-[#6BBAE0] hover:text-white transition text-sm font-semibold">
+                                Forgot Password?
+                            </a>
+                        </div>
+
+                        <button type="submit"
+                            class="mt-6 w-full bg-[#6BBAE0] text-[#0F172A] py-3 rounded-lg font-bold text-lg hover:bg-white transition duration-300">
+                            <i class="fas fa-sign-in-alt mr-2"></i> Login
+                        </button>
+                    </form>
+
+                    <p class="mt-6 text-center text-gray-400">
+                        Don't have an account?
+                        <a href="#" onclick="showForm('signup')" class="text-[#6BBAE0] font-semibold hover:text-white transition">Signup</a>
+                    </p>
+                </div>
+
+                <!-- ==================== FORGOT PASSWORD FORM ==================== -->
+                <div id="forgot-form" class="bg-[#1E293B] rounded-2xl p-8 border border-[#6BBAE0]/20 hidden">
+                    <h2 class="text-3xl font-bold text-white text-center mb-6">Reset <span class="text-[#6BBAE0]">Password</span></h2>
+
+                    <form>
+                        <!-- Step 1: Email -->
+                        <div id="forgot-step-1">
+                            <div>
+                                <label for="forgot-email" class="block text-[#6BBAE0] font-semibold mb-2">Email Address</label>
+                                <input type="email" id="forgot-email" required
+                                    class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                            </div>
+                            <button type="button" onclick="showForgotStep(2)"
+                                class="mt-4 w-full bg-[#6BBAE0] text-[#0F172A] py-3 rounded-lg font-bold hover:bg-white transition duration-300">
+                                <i class="fas fa-paper-plane mr-2"></i> Send OTP
+                            </button>
+                        </div>
+
+                        <!-- Step 2: OTP & New Password -->
+                        <div id="forgot-step-2" class="hidden">
+                            <div>
+                                <label for="otp" class="block text-[#6BBAE0] font-semibold mb-2">Enter OTP</label>
+                                <input type="text" id="otp" required
+                                    class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                            </div>
+                            <div class="mt-4">
+                                <label for="new-password" class="block text-[#6BBAE0] font-semibold mb-2">New Password</label>
+                                <input type="password" id="new-password" required
+                                    class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                            </div>
+                            <div class="mt-4">
+                                <label for="confirm-new-password" class="block text-[#6BBAE0] font-semibold mb-2">Confirm Password</label>
+                                <input type="password" id="confirm-new-password" required
+                                    class="w-full bg-[#0F172A] text-white px-4 py-3 rounded-lg border border-[#6BBAE0]/30 focus:border-[#6BBAE0] focus:outline-none transition">
+                            </div>
+                            <button type="submit"
+                                class="mt-6 w-full bg-[#6BBAE0] text-[#0F172A] py-3 rounded-lg font-bold text-lg hover:bg-white transition duration-300">
+                                <i class="fas fa-redo-alt mr-2"></i> Reset Password
+                            </button>
+                        </div>
+
+                        <p class="mt-6 text-center text-gray-400">
+                            Remember your password?
+                            <a href="#" onclick="showForm('login')" class="text-[#6BBAE0] font-semibold hover:text-white transition">Login</a>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT: HOSPITAL IMAGE -->
+        <div class="hidden lg:block w-1/2 hospital-bg relative">
+            <div class="absolute inset-0 bg-[#0F172A]/60 flex items-center justify-center">
+                <div class="text-center text-white p-8">
+                    <h2 class="text-4xl font-bold mb-4">Your Health, Our Priority</h2>
+                    <p class="text-lg text-gray-200 max-w-md mx-auto">Experience smarter healthcare management with ABI CARE – book appointments, access records, and connect with trusted doctors.</p>
+                    <div class="mt-6 flex justify-center gap-6">
+                        <span class="flex items-center gap-2"><i class="fas fa-check-circle text-[#6BBAE0]"></i> Secure</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-check-circle text-[#6BBAE0]"></i> Compassionate</span>
+                        <span class="flex items-center gap-2"><i class="fas fa-check-circle text-[#6BBAE0]"></i> Accessible</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+        
+
+
+    <!-- JavaScript to toggle forms -->
+    <script src="log.js">
+        function showForm(form) {
+            document.getElementById('signup-form').classList.add('hidden');
+            document.getElementById('login-form').classList.add('hidden');
+            document.getElementById('forgot-form').classList.add('hidden');
+
+            if (form === 'signup') {
+                document.getElementById('signup-form').classList.remove('hidden');
+                document.getElementById('forgot-step-1').classList.remove('hidden');
+                document.getElementById('forgot-step-2').classList.add('hidden');
+            } else if (form === 'login') {
+                document.getElementById('login-form').classList.remove('hidden');
+                document.getElementById('forgot-step-1').classList.remove('hidden');
+                document.getElementById('forgot-step-2').classList.add('hidden');
+            } else if (form === 'forgot') {
+                document.getElementById('forgot-form').classList.remove('hidden');
+                document.getElementById('forgot-step-1').classList.remove('hidden');
+                document.getElementById('forgot-step-2').classList.add('hidden');
+            }
+        }
+
+        function showForgotStep(step) {
+            if (step === 2) {
+                document.getElementById('forgot-step-1').classList.add('hidden');
+                document.getElementById('forgot-step-2').classList.remove('hidden');
+            }
+        }
+
+        // Default: show login form
+        showForm('login');
+    </script>
+
+</body>
+
+</html>
