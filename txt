@@ -1,0 +1,1 @@
+body > section.place-sec > div > div:nth-child(3) > div > div > div:nth-child(3)
